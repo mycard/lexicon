@@ -21,7 +21,7 @@ RUN chmod +x /srv/letsencrypt/letsencrypt.default.sh
 
 # Install dns-lexicon
 RUN pip install requests[security]
-RUN pip install dns-lexicon
+RUN pip install git+https://github.com/mycard/lexicon
 
 # Create letsencrypt domains.txt file.
 RUN echo "test.intranet.example.com" > /srv/letsencrypt/domains.txt
